@@ -20,9 +20,11 @@ if (c)
 		lower <- min(x$data)
 lim <- c(lower-(upper-lower)*0.1, upper+(upper-lower)*0.1)
 
+if (h) pcut <- x$positive.cut
+if (c) ncut <- x$negative.cut
 densityplot(~c(NA, x$data), col = c("black", color), pch = c(NA, pc),
 	xlim = lim, xlab = x$dataset_name,
 	panel = function(x,...) {
 		panel.densityplot(x,...,)
-		if (h) panel.abline(v = x$positive.cut, col = "red")
-		if (c) panel.abline(v = x$negative.cut, col = "blue") }, ... ) }
+		if (h) panel.abline(v = pcut, col = "red")
+		if (c) panel.abline(v = ncut, col = "blue") }, ... ) }
