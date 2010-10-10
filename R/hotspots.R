@@ -1,5 +1,5 @@
 hotspots <-
-function(x, p = 0.99, tail = "positive", distribution = "t", var.est = "Qn") {
+function(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad") {
 z <- list(x = x)
 z$data <- x[!is.na(x)]
 z$distribution <- distribution

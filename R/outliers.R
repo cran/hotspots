@@ -1,5 +1,5 @@
 outliers <-
-function(x, p = 0.99, tail = "positive", distribution = "t", var.est = "Qn", 
+function(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad", 
 	center.est = "mean") {
 u <- eval(parse(text = center.est))(x[!is.na(x)])
 z <- hotspots(x-u, p = p, tail = tail, 

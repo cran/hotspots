@@ -13,9 +13,9 @@ large relative to other values. Thus, a value that is a statistical
 outlier may not always be a hot spot if other values are similarly large.
 }
 \usage{
-hotspots(x, p = 0.99, tail = "positive", distribution = "t", var.est = "Qn")
+hotspots(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad")
 
-outliers(x, p = 0.99, tail = "positive", distribution = "t", var.est = "Qn", center.est = "mean")
+outliers(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad", center.est = "mean")
 }
 \arguments{
  \item{x}{
@@ -36,8 +36,7 @@ to the source code.
 }
  \item{var.est}{
 character vector indicating the function to be used to estimate the level of variation within the data.
-Defaults to the robust measure \code{"Qn"} from the package \code{robustbase}, but the function works similarly with \code{"mad"}. Non-robust
-mesures such as \code{"sd"} may also be used, but result in greater variation in cutoff location.
+Defaults to the robust measure \code{"mad"}. Non-robust measures such as \code{"sd"} may also be used, but result in greater variation in cutoff location.
 }
 \item{center.est}{
 character vector indicating the function to be used to center the data for identification of outliers.
@@ -127,7 +126,7 @@ summary(rln100p10o)
 plot(rln100p10o)
 
 #some alternative parameters
-rln100a <- hotspots(rlnorm(100), p = 0.9, distribution = "normal",  var.est = "mad")
+rln100a <- hotspots(rlnorm(100), p = 0.9, distribution = "normal",  var.est = "sd")
 summary(rln100a)
 plot(rln100a)
 
