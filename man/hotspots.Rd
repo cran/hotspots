@@ -15,7 +15,8 @@ outlier may not always be a hot spot if other values are similarly large.
 \usage{
 hotspots(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad")
 
-outliers(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad", center.est = "mean")
+outliers(x, p = 0.99, tail = "positive", distribution = "t", var.est = "mad",
+  center.est = "mean")
 }
 \arguments{
  \item{x}{

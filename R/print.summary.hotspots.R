@@ -18,8 +18,8 @@ cat("\nn = ", length(x$data))
 
 if (h & top > 0) {
 cat(paste("\n\n", top, " most disproportionate positive ", ty,  "s", sep = ""))
-value <- sort(x$data, dec = TRUE)[1:top]
-hn <- sort(x$disprop$positive, dec = TRUE)[1:top]
+value <- sort(x$data, decreasing = TRUE)[1:top]
+hn <- sort(x$disprop$positive, decreasing = TRUE)[1:top]
 cat("\n\n")
 tp <- cbind(value, hn)
 dimnames(tp) <- list(1:top, c("value", "disproportionality"))
@@ -27,8 +27,8 @@ print.default(tp, print.gap = 2, quote = FALSE, digits = digits) }
 
 if (c & top > 0) {
 cat(paste("\n\n", top, " most disproportionate negative ", ty,  "s", sep = ""))
-value <- sort(x$data, dec = TRUE)[1:top]
-hn <- sort(x$disprop$negative, dec = TRUE)[1:top]
+value <- sort(x$data, decreasing = TRUE)[1:top]
+hn <- sort(x$disprop$negative, decreasing = TRUE)[1:top]
 cat("\n\n")
 tp <- cbind(value, hn)
 dimnames(tp) <- list(1:top, c("value", "disproportionality"))

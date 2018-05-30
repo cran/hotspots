@@ -1,11 +1,11 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
+importFrom("graphics", "par", "plot", "points")
+importFrom("stats", "median", "qnorm", "qt")
+importFrom("ineq", "Lc")
+importFrom("lattice", "densityplot", "panel.densityplot", "panel.abline")
 
-# Export all names
-exportPattern(".")
+export(hotspots, disprop, Lchs, outliers)
 
-# Import all packages listed as Imports or Depends
-import(
-  lattice,
-  ineq
-)
+S3method(plot, hotspots)
+S3method(print, hotspots)
+S3method(summary, hotspots)
+S3method(print, summary.hotspots)
