@@ -12,10 +12,10 @@ Plotting hot spot and outlier cutoffs}
 \arguments{
   \item{x}{\code{"hotspots"} object}
   \item{pch}{plotting character. See \code{\link{par}}}
-  \item{\dots}{further plotting parameters to pass to \code{\link{densityplot}}}
+  \item{\dots}{further plotting parameters to pass to \code{\link[lattice]{densityplot}}}
 }
 \details{
-Uses the function \code{\link{densityplot}} from the \code{lattice} package to show the distribution of the data and the position
+Uses the function \code{\link[lattice]{densityplot}} from the \code{lattice} package to show the distribution of the data and the position
 of the positive and/or negative hot spot or outlier cutoffs.
 }
 \value{
@@ -24,7 +24,7 @@ An object of class \code{"trellis"}.
 \author{Anthony Darrouzet-Nardi}
 
 \seealso{
-\code{\link{hotspots}}, \code{\link{summary.hotspots}}, \code{\link{densityplot}}}
+\code{\link{hotspots}}, \code{\link{summary.hotspots}}, \code{\link[lattice]{densityplot}}}
 
 \examples{
 #both tails on skewed data
